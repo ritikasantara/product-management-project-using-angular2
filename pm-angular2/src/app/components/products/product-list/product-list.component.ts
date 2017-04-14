@@ -14,6 +14,7 @@ export class ProductListComponent {
   productTdpadding: number;
   products: any[];
   showImage: boolean;
+  listFilter:string;
 
   constructor() { 
 
@@ -22,6 +23,7 @@ export class ProductListComponent {
     this.imageMarginleft = 23;
     this.showImage = false;
     this.productTdpadding = 12;
+    this.listFilter = "Bag";
 
     this.products = [
       {

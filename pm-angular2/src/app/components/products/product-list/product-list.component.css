@@ -11,6 +11,13 @@ button{
     font-size: 15px;
 }
 
+.filter{
+
+    color: #664b6d;
+    font-style: italic;
+    font-size: 14px;
+}
+
 
 .panel-heading{
 
@@ -30,6 +37,14 @@ button{
 .filtered_by{
 
     padding: 30px 0 30px 25px;
+}
+
+.filtered_by span{
+
+    color: #664b6d;
+    margin-left: 10px;
+    font-style: italic;
+    
 }
 
 th{

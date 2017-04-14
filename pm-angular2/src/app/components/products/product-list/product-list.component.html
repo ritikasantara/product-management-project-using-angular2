@@ -13,13 +13,13 @@
     <div class="row">
 
       <div class="col-md-2" class="filter_by">Filter By:</div>
-      <div class="col-md-4"><input type="text" /></div>
+      <div class="col-md-4"><input class="filter" type="text" [(ngModel)]="listFilter" /></div>
 
     </div>
 
     <div class="row">
 
-      <div class="col-md-6"  class="filtered_by"><h2>Filtered By:</h2></div>
+      <div class="col-md-6" class="filtered_by"><h2>Filtered By: <span>{{ listFilter }}</span></h2></div>
   
     </div>
 
@@ -56,9 +56,9 @@
             </td> 
 
             <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.productName }}</td>
-            <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.productCode }}</td>
+            <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.productCode | uppercase }}</td>
             <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.releaseDate }}</td>
-            <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.price }}</td>
+            <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.price | currency:'INR':true:'1.2-2'}}</td>
             <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.starRating }}</td>
 
           </tr>
