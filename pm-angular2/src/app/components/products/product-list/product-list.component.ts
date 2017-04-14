@@ -10,13 +10,17 @@ export class ProductListComponent {
   pageTitle: string;
   imageWidth: number;
   imageMargin: number;
+  productTdpadding: number;
   products: any[];
+  showImage: boolean;
 
   constructor() { 
 
     this.pageTitle = "Product List";
     this.imageWidth = 50;
     this.imageMargin = 3;
+    this.showImage = false;
+    this.productTdpadding = 12;
 
     this.products = [
       {
@@ -69,6 +73,12 @@ export class ProductListComponent {
     ];
 
  }
+
+     toggleImage(): void{
+
+      this.showImage = !this.showImage;
+
+    }
 
 }
 
