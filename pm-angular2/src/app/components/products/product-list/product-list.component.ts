@@ -9,7 +9,8 @@ export class ProductListComponent {
 
   pageTitle: string;
   imageWidth: number;
-  imageMargin: number;
+  imageMarginleft: number;
+  imagePaddingleft: number;
   productTdpadding: number;
   products: any[];
   showImage: boolean;
@@ -18,7 +19,7 @@ export class ProductListComponent {
 
     this.pageTitle = "Product List";
     this.imageWidth = 50;
-    this.imageMargin = 3;
+    this.imageMarginleft = 23;
     this.showImage = false;
     this.productTdpadding = 12;
 

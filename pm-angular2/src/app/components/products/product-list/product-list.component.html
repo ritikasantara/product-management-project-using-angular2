@@ -31,7 +31,7 @@
 
           <tr>
 
-            <th><button (click)="toggleImage()" class="btn btn-primary">{{showImage ? "Hide" : "Show"}} Image</button></th>
+            <th><button (click)="toggleImage()" class="btn btn-primary">{{showImage ? "Hide" : "Show"}} Images</button></th>
             <th>Product</th>
             <th>Code</th>
             <th>Available</th>
@@ -51,14 +51,15 @@
                 [src]='product.imageUrl'        
                 [title]='product.productName' 
                 [style.width.px]='imageWidth' 
-                [style.margin.px]='imageMargin'/>   <!--property binding-->
+                [style.margin-left.px]='imageMarginleft'/>   <!--property binding-->
 
             </td> 
-            <td class="product_details">{{ product.productName }}</td>
-            <td class="product_details">{{ product.productCode }}</td>
-            <td class="product_details">{{ product.releaseDate }}</td>
-            <td class="product_details">{{ product.price }}</td>
-            <td class="product_details">{{ product.starRating }}</td>
+
+            <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.productName }}</td>
+            <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.productCode }}</td>
+            <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.releaseDate }}</td>
+            <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.price }}</td>
+            <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.starRating }}</td>
 
           </tr>
 

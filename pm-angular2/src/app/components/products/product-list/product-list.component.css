@@ -2,7 +2,13 @@
 
 .container{
 
-    margin: 30px auto;
+    margin: 50px auto;
+    
+}
+
+button{
+
+    font-size: 15px;
 }
 
 
@@ -35,4 +41,11 @@ th{
     font-size: 14px;
     color: #664b6d;
     padding-top: 27px;
+}
+
+.product_details1{
+
+    font-size: 14px;
+    padding-top: 8px;
+    color: #664b6d;
 }
