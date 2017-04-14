@@ -1,0 +1,37 @@
+
+
+.container{
+
+    margin: 30px auto;
+}
+
+
+.panel-heading{
+
+    font-size: 25px;
+}
+
+.row{
+
+    font-size: 18px;
+}
+.filter_by{
+
+    padding-left: 25px;
+}
+
+.filtered_by{
+
+    padding: 30px 0 30px 25px;
+}
+
+th{
+    font-size: 18px;
+    color: #453040;
+}
+
+.product_details{
+    font-size: 14px;
+    color: #664b6d;
+    padding-top: 27px;
+}
