@@ -43,7 +43,7 @@
 
         <tbody>
 
-          <tr *ngFor="let product of products">
+          <tr *ngFor="let product of products | productFilter:listFilter"> <!-- CUSTOM PIPE -->
 
             <td>
 
@@ -51,7 +51,7 @@
                 [src]='product.imageUrl'        
                 [title]='product.productName' 
                 [style.width.px]='imageWidth' 
-                [style.margin-left.px]='imageMarginleft'/>   <!--property binding-->
+                [style.margin-left.px]='imageMarginleft'/>   <!-- PROPERTY BINDING -->
 
             </td> 
 
@@ -60,7 +60,8 @@
             <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.releaseDate }}</td>
             <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.price | currency:'INR':true:'1.2-2'}}</td>
             <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.starRating }}</td>
-
+            
+            <!-- use 'product_details' class if 'showImage' is true,else use 'product_details1' class -->
           </tr>
 
 
