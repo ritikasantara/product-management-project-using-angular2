@@ -59,7 +59,7 @@
             <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.productCode | uppercase }}</td>
             <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.releaseDate }}</td>
             <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.price | currency:'INR':true:'1.2-2'}}</td>
-            <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.starRating }}</td>
+            <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}"><app-star [rating]='product.starRating'></app-star></td>
             
             <!-- use 'product_details' class if 'showImage' is true,else use 'product_details1' class -->
           </tr>
