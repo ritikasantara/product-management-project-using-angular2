@@ -34,7 +34,7 @@ export class ProductListComponent implements OnInit {
         "releaseDate" : "March 18, 2017",
         "description" : "Tote Bag....lorem ipsom h",
         "price" : 1099,
-        "starRating" : 2,
+        "starRating" : 2.4,
         "imageUrl" : "http://uk.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-armand-open-tote-taurillon-leather-men-s-bags--M42683_PM2_Front%20view.jpg"
       },
 
@@ -45,7 +45,7 @@ export class ProductListComponent implements OnInit {
         "releaseDate" : "April 07, 2017",
         "description" : "Satchel Bag....lorem ipsom h",
         "price" : 1599,
-        "starRating" : 4.9,
+        "starRating" : 4.6,
         "imageUrl" : "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=161416907"
 
       },
@@ -70,7 +70,7 @@ export class ProductListComponent implements OnInit {
         "releaseDate" : "March 28, 2017",
         "description": "Tote Bag....lorem ipsom h",
         "price" : 1299,
-        "starRating" : 4,
+        "starRating" : 3.5,
         "imageUrl" : "http://www.bodenimages.com/productimages/productmedium/17wsum_am278_tan.jpg"
       }
 
@@ -86,6 +86,11 @@ export class ProductListComponent implements OnInit {
 
     ngOnInit(): void{
       console.log('Product-list OnInit initiated..');
+    }
+
+    onRatingClicked(message: string): void{
+
+      this.pageTitle = 'Product List: ' +message;
     }
 
 
