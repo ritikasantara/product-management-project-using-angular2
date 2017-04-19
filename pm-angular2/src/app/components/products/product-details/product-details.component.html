@@ -1,8 +1,19 @@
 <div class="container">
 
-  <div class="panel panel-default">
+  <div class="panel panel-primary">
 
-      {{ pageTitle }}
+    <div class="panel panel-heading"> {{ pageTitle }} </div>
 
   </div>
+
+    <div class="panel panel-footer">
+
+      <a class="btn btn-default" (click)='onBack()' style='width:100px'>
+
+        <i class="glyphicon glyphicon-chevron-left back"></i>Back
+
+      </a> 
+
+    </div>
+
 </div>

@@ -55,7 +55,7 @@
 
             </td> 
 
-            <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.productName }}</td>
+            <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}"><a [routerLink]="['/product_details', product.productId]">{{ product.productName }}</a></td>
             <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.productCode | uppercase }}</td>
             <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.releaseDate }}</td>
             <td [ngClass]="{'product_details' : showImage, 'product_details1' : !showImage}">{{ product.price | currency:'INR':true:'1.2-2'}}</td>
