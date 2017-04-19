@@ -4,4 +4,27 @@ p{
     font-style: 'Open sans','sans-serif';
     margin-top: 30px;
     font-size: 30px;
+
+}
+
+.display{
+
+    background: lavender;
+}
+
+nav ul li{
+    
+    display: inline-block;
+    list-style: none;
+    font-size: 18px;
+    padding: 20px;
+    margin: 0 auto;
+
+}
+
+.content{
+
+    background: #f0f2f2;
+    margin-top: 50px;
+    padding: 30px;
 }

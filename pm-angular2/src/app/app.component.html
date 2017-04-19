@@ -1,2 +1,36 @@
-<p>{{ title }}</p>
-<app-product-list></app-product-list>
+
+ <div class="container display">
+
+    <p>{{ title }}</p>
+
+    <nav>
+
+        <div class="menu">
+
+         
+            
+            <ul>
+                <li><a [routerLink]="['/']">Home</a></li>
+                <li><a [routerLink]="['/products']">Products</a></li>
+                <li><a [routerLink]="['/about']">About</a></li>
+            </ul>
+
+            
+
+        </div>
+
+    </nav>
+
+ 
+    </div>
+
+   <div class="container content">
+
+        <router-outlet></router-outlet>
+
+   </div>
+
+    
+    
+
+
