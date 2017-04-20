@@ -2,62 +2,73 @@
 
   <div class="panel panel-primary" *ngIf="product">
 
-      <div class="panel panel-heading"> {{ pageTitle+ ":" + product.productName }} </div>
+      <div class="panel panel-heading" style='font-size: 18px ; color: #f2f2f2'><em>{{ pageTitle+ ":" + "   " + product.productName }}</em></div>
 
 
-      <div class="panel-body">
+      <div class="panel-body" style='font-size: 14px ; color: #664b6d'>
 
         <div class="row">
 
-          <div class="col-md-6">
+          <div class="col-md-7">
 
             <div class="row">
 
-              <div class="col-md-3">Name:</div>
-              <div class="col-md-6">{{ product.productName }}</div>
+              <div class="col-md-3"><strong>Name:</strong></div>
+              <div class="col-md-7">{{ product.productName }}</div>
 
             </div>
 
 
             <div class="row">
 
-              <div class="col-md-3">Code:</div>
-              <div class="col-md-6">{{ product.productCode }}</div>
+              <div class="col-md-3"><strong>Code:</strong></div>
+              <div class="col-md-7">{{ product.productCode }}</div>
 
             </div>
 
             <div class="row">
 
-              <div class="col-md-3">Availability:</div>
-              <div class="col-md-6">{{ product.releaseDate }}</div>
+              <div class="col-md-3"><strong>Availability:</strong></div>
+              <div class="col-md-7">{{ product.releaseDate }}</div>
 
             </div>
 
             <div class="row">
 
-              <div class="col-md-3">Description:</div>
-              <div class="col-md-6">{{ product.description }}</div>
+              <div class="col-md-3"><strong>Description:</strong></div>
+              <div class="col-md-7">{{ product.description }}</div>
 
             </div>
 
             <div class="row">
 
-              <div class="col-md-3">Price:</div>
-              <div class="col-md-6">{{ product.price }}</div>
+              <div class="col-md-3"><strong>Price:</strong></div>
+              <div class="col-md-7">{{ product.price | currency: 'INR' : true }}</div>
 
             </div>
 
             <div class="row">
 
-              <div class="col-md-3">Star Rating:</div>
-              <div class="col-md-6">{{ product.starRating }}</div>
+              <div class="col-md-3"><strong>Star Rating:</strong></div>
+              <div class="col-md-7"><app-star [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)'></app-star></div>
 
             </div>
 
           </div>
 
-        </div>
 
+
+          <div class="col-md-5">
+
+            <img class="center-block image-responsive" 
+              [style.width.px]='200'
+              [style.margin.px]='2'
+              [src]='product.imageUrl'
+              [title]='product.productName'>
+
+          </div>
+
+        </div>
 
 
       </div>
