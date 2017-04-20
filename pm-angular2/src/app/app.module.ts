@@ -11,6 +11,7 @@ import { StarComponent } from './components/star/star.component';
 import { ProductDetailsComponent } from './components/products/product-details/product-details.component';
 import { AboutComponent } from './components/about/about.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { ProductGuardGuard } from './guards/product-guard.guard';
 
 @NgModule({
   declarations: [
@@ -27,9 +28,9 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     FormsModule,
     HttpModule,
     routing
-  
+    
   ],
-  providers: [],
+  providers: [ ProductGuardGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,6 +6,7 @@ import{ WelcomeComponent } from './components/welcome/welcome.component';
 import{ ProductListComponent } from './components/products/product-list/product-list.component';
 import { AboutComponent } from './components/about/about.component';
 import{ ProductDetailsComponent } from './components/products/product-details/product-details.component';
+import { ProductGuardGuard } from './guards/product-guard.guard';
 
 const appRoutes: Routes = [
 
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
     },
     {
         path: 'product_details/:id',
+        canActivate: [ ProductGuardGuard ],
         component: ProductDetailsComponent
     }
 
